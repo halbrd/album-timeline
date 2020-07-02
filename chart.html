@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timeline</title>
+    <script type="text/javascript"
+        src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #visualization {
+            width: 100%;
+        }
+        figure {
+            margin: 0;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="visualization"></div>
+    <script type="text/javascript">
+        // DOM element where the Timeline will be attached
+        var container = document.getElementById('visualization');
+
+        // Create a DataSet (allows two way data-binding)
+        var items = new vis.DataSet(
+// meta: start data
+
+// meta: end data
+        );
+
+        // Configuration for the Timeline
+        var options = {};
+
+        // Create a Timeline
+        var timeline = new vis.Timeline(container, items, options);
+    </script>
+</body>
+
+</html>
