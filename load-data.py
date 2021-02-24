@@ -18,7 +18,7 @@ def album_to_html(album):
     name = album.title
     cover_art_url = album_to_cover_art_url(album)
     # return f'<figure><img src="{cover_art_url}" alt="{name}"><figcaption>{name}</figcaption></figure>'
-    return f'<figure><img src="{cover_art_url}" alt="{name}"></figure>'
+    return f'<img src="{cover_art_url}" alt="{name}">'
 
 def process_album(album):
     if album.originallyAvailableAt is None:
